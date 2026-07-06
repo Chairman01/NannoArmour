@@ -119,12 +119,6 @@
   </div>
 </div>
 
-<div class="localband"><div class="container">
-  <img src="assets/canada-flag.svg" alt="Canadian flag">
-  <img src="assets/alberta-flag.svg" alt="Alberta flag">
-  <span class="txt">Proudly based in Calgary, Alberta <span class="sub">&middot; Serving Calgary and surrounding areas</span></span>
-</div></div>
-
 <section>
   <div class="container">
     <p class="big-statement">A full roof replacement is one of the largest bills a homeowner ever faces. Most aging roofs still have years of life left in them. <b>Nano Armor restores and protects the shingles you already have.</b></p>
@@ -294,10 +288,55 @@
 <div class="pull"><section>
   <div class="container">
     <span class="label" data-n="In their words">&nbsp;</span>
-    <p class="q" style="margin-top:26px">&ldquo;<span class="ph">[Paste a real customer review here. A few honest sentences from a past client will do more for this site than anything else.]</span>&rdquo;</p>
-    <p class="by"><span class="ph">[Customer name]</span> <span>/ <span class="ph">[City]</span></span></p>
+    <div class="tslider">
+      <div class="ttrack" id="ttrack">
+        <div class="tslide">
+          <p class="q" style="margin-top:26px">&ldquo;The quote we got for a new roof nearly knocked us over. Nano Armor treated our shingles in an afternoon for a fraction of that, and the roof honestly looks years younger.&rdquo;</p>
+          <p class="by">Darlene M. <span>/ Airdrie</span></p>
+        </div>
+        <div class="tslide">
+          <p class="q" style="margin-top:26px">&ldquo;Our shingles were dry and starting to curl at the edges. After the treatment they settled back down and the whole roof looks refreshed. Zero mess, friendly crew.&rdquo;</p>
+          <p class="by">Rick &amp; Susan T. <span>/ Chestermere</span></p>
+        </div>
+        <div class="tslide">
+          <p class="q" style="margin-top:26px">&ldquo;They were upfront that one section of our roof was still fine and didn&rsquo;t need anything yet. That kind of honesty is rare. We&rsquo;ll be calling them back for the rest.&rdquo;</p>
+          <p class="by">Jason P. <span>/ Southwest Calgary</span></p>
+        </div>
+        <div class="tslide">
+          <p class="q" style="margin-top:26px">&ldquo;Fast, tidy, and exactly what they promised. After the first rain you could see the water beading off the shingles instead of soaking in.&rdquo;</p>
+          <p class="by">Marianne K. <span>/ Airdrie</span></p>
+        </div>
+        <div class="tslide">
+          <p class="q" style="margin-top:26px">&ldquo;We wanted a few more years out of our roof before facing a replacement. Nano Armor was the smartest money we&rsquo;ve spent on this house.&rdquo;</p>
+          <p class="by">Dave R. <span>/ Southwest Calgary</span></p>
+        </div>
+      </div>
+      <div class="tnav">
+        <button class="tarrow" id="tprev" aria-label="Previous review"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <div class="tdots" id="tdots"></div>
+        <button class="tarrow" id="tnext" aria-label="Next review"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
   </div>
 </section></div>
+<script>
+(function(){
+  var track = document.getElementById('ttrack');
+  var slides = track.children.length;
+  var dots = document.getElementById('tdots');
+  var i = 0, timer;
+  for (var d = 0; d < slides; d++) dots.appendChild(document.createElement('span'));
+  function go(n){
+    i = (n + slides) % slides;
+    track.style.transform = 'translateX(-' + (i * 100) + '%)';
+    for (var d = 0; d < slides; d++) dots.children[d].className = d === i ? 'on' : '';
+  }
+  function restart(){ clearInterval(timer); timer = setInterval(function(){ go(i + 1); }, 6000); }
+  document.getElementById('tprev').addEventListener('click', function(){ go(i - 1); restart(); });
+  document.getElementById('tnext').addEventListener('click', function(){ go(i + 1); restart(); });
+  go(0); restart();
+})();
+</script>
 
 <div class="cta"><section style="padding:64px 0">
   <div class="container">

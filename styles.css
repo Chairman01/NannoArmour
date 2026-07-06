@@ -161,14 +161,25 @@ section{padding:96px 0}
 .pull .by{margin-top:28px;font-family:var(--sans);font-weight:600;font-size:.9rem;letter-spacing:.04em;color:#cdd9ec}
 .pull .by span{color:#8ba0c2;font-weight:500}
 
+/* testimonial slider */
+.tslider{overflow:hidden;margin-top:6px}
+.ttrack{display:flex;transition:transform .55s cubic-bezier(.4,0,.2,1)}
+.tslide{min-width:100%;padding-right:2px}
+.tnav{display:flex;align-items:center;gap:18px;margin-top:34px}
+.tarrow{width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:border-color .2s,color .2s}
+.tarrow:hover{border-color:var(--gold);color:var(--gold)}
+.tarrow svg{display:block}
+.tdots{display:flex;gap:8px}
+.tdots span{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.3);transition:background .2s}
+.tdots span.on{background:var(--gold)}
+
 /* prose */
 .prose{max-width:720px}
 .prose p{margin-bottom:20px;color:var(--ink-soft);font-size:1.08rem;line-height:1.7}
 .prose h2{font-size:1.8rem;margin:44px 0 16px}
 .prose h3{font-size:1.25rem;margin:28px 0 10px}
 .prose ul{list-style:none;margin:8px 0 22px}
-.prose li{padding:12px 0 12px 30px;position:relative;border-bottom:1px solid var(--line);color:var(--ink-soft)}
-.prose li:before{content:"";position:absolute;left:0;top:20px;width:13px;height:13px;border:2px solid var(--blue);border-radius:3px}
+.prose li{padding:12px 0;border-bottom:1px solid var(--line);color:var(--ink-soft)}
 .prose li b{color:var(--ink)}
 
 /* CTA */

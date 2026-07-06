@@ -18,13 +18,12 @@ Plain HTML/CSS. No build step required.
 
 ## Deploy (Vercel)
 
-1. Push this folder's contents to a GitHub repo (index.html at the repo root).
-2. In Vercel: **Add New → Project → Import** the repo.
-3. Framework Preset: **Other**. No build command. Click **Deploy**.
+1. In Vercel: **Add New → Project → Import** the `NannoArmour` GitHub repo.
+2. Framework Preset: **Other**. No build command. Click **Deploy**.
 
 ## To finish before launch
 
-- Add a real customer review (placeholders marked on the pages).
+- Replace the sample testimonials on the home and about pages with real customer reviews.
 - Connect the contact form to email (e.g. Formspree) so quote requests reach info@nano-armor.ca.
 - Point the `nano-armor.ca` domain at the deployment.
 
