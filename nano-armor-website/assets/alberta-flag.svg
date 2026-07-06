@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" width="100" height="50">
+  <rect width="100" height="50" fill="#0038a8"/>
+  <defs>
+    <clipPath id="sh">
+      <path d="M38,10 h24 v18 c0,9 -7,13 -12,16 c-5,-3 -12,-7 -12,-16 z"/>
+    </clipPath>
+  </defs>
+  <!-- shield outline -->
+  <path d="M38,10 h24 v18 c0,9 -7,13 -12,16 c-5,-3 -12,-7 -12,-16 z" fill="#fff" stroke="#fff" stroke-width="1.4"/>
+  <g clip-path="url(#sh)">
+    <!-- landscape from bottom up -->
+    <rect x="34" y="26" width="32" height="18" fill="#e3a81e"/>            <!-- prairie / wheat -->
+    <rect x="34" y="23" width="32" height="4" fill="#3f7d3a"/>             <!-- green hills -->
+    <rect x="34" y="19.5" width="32" height="4" fill="#4f97c4"/>          <!-- lower sky -->
+    <polygon points="34,23 43,15 50,21 57,14 66,23" fill="#fff"/>          <!-- mountains -->
+    <polygon points="34,23 43,15 50,21 57,14 66,23 66,24 34,24" fill="#d9e6ee" opacity="0.5"/>
+    <rect x="34" y="10" width="32" height="8" fill="#fff"/>                <!-- chief (white) -->
+    <rect x="48.4" y="10" width="3.2" height="8" fill="#d52b1e"/>          <!-- red cross vertical -->
+    <rect x="34" y="12.4" width="32" height="3.2" fill="#d52b1e"/>         <!-- red cross horizontal -->
+  </g>
+  <path d="M38,10 h24 v18 c0,9 -7,13 -12,16 c-5,-3 -12,-7 -12,-16 z" fill="none" stroke="#0a2a6b" stroke-width="1"/>
+</svg>
